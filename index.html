@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carpeta Certificada</title>
+    <meta
+      name="description"
+      content="Demo estatica para certificar documentos con SHA-256, PDF y QR verificable."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./">Carpeta Certificada</a>
+      <nav>
+        <a href="#certificar">Certificar</a>
+        <a href="#precios">Precios</a>
+        <a href="#legal">Legal</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Demo gratuita en GitHub Pages</p>
+          <h1>Certifica carpetas y documentos con PDF + QR verificable.</h1>
+          <p class="lead">
+            Calcula SHA-256 en tu navegador y genera una prueba tecnica local.
+            La app completa usa backend, base de datos, pagos y emails.
+          </p>
+          <a class="button" href="#certificar">Probar demo</a>
+        </div>
+        <aside class="certificate">
+          <div class="watermark">Muestra gratuita</div>
+          <div class="certificate-head">
+            <div>
+              <p class="label">Certificado</p>
+              <h2>Entrega documental</h2>
+            </div>
+            <div class="qr">QR</div>
+          </div>
+          <dl>
+            <div><dt>ID</dt><dd>cert_demo</dd></div>
+            <div><dt>Estado</dt><dd>Verificable local</dd></div>
+            <div><dt>Archivos</dt><dd id="file-count">0</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section id="certificar" class="panel">
+        <div>
+          <p class="eyebrow">Herramienta SHA-256</p>
+          <h2>Selecciona archivos</h2>
+          <p>
+            La demo no sube archivos. Calcula hashes en el navegador y guarda
+            el resultado solo en esta sesion.
+          </p>
+        </div>
+        <label class="dropzone">
+          <input id="file-input" type="file" multiple />
+          <span>Seleccionar archivos</span>
+          <small>PDF, imagenes, DOCX, XLSX o ZIP</small>
+        </label>
+        <div id="results" class="results"></div>
+      </section>
+
+      <section id="precios" class="pricing">
+        <article>
+          <h2>Gratis</h2>
+          <p class="price">0 EUR</p>
+          <p>Hash y certificado con marca de agua.</p>
+        </article>
+        <article>
+          <h2>Pago unico</h2>
+          <p class="price">4,90 EUR</p>
+          <p>PDF sin marca de agua, QR publico y pagina verificable.</p>
+        </article>
+        <article>
+          <h2>Pro</h2>
+          <p class="price">9 EUR/mes</p>
+          <p>Historial, QR permanente y 50 certificados al mes.</p>
+        </article>
+      </section>
+
+      <section id="legal" class="legal">
+        <h2>Aviso legal</h2>
+        <p>
+          Este certificado acredita tecnicamente la integridad de archivos
+          mediante hashes criptograficos. No sustituye una firma electronica
+          cualificada ni un sello de tiempo cualificado.
+        </p>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
