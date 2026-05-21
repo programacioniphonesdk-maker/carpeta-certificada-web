@@ -65,6 +65,44 @@
         <div id="results" class="results"></div>
       </section>
 
+      <section id="interes" class="interest">
+        <div>
+          <p class="eyebrow">Validacion privada</p>
+          <h2>Quieres certificar una carpeta real?</h2>
+          <p>
+            Estamos validando casos reales antes de abrir el producto completo.
+            El certificado completo costara 4,90 EUR e incluira PDF sin marca de
+            agua, QR publico y pagina verificable.
+          </p>
+        </div>
+        <form id="interest-form" class="interest-form">
+          <label>
+            Email
+            <input id="lead-email" name="email" type="email" required />
+          </label>
+          <label>
+            Caso de uso
+            <select id="lead-use-case" name="use-case" required>
+              <option value="">Selecciona una opcion</option>
+              <option>Autonomo / entrega a cliente</option>
+              <option>Fotos o presupuesto de obra</option>
+              <option>Justificacion de subvencion</option>
+              <option>Gestoria / expedientes de clientes</option>
+              <option>Otro</option>
+            </select>
+          </label>
+          <label>
+            Que quieres certificar?
+            <textarea id="lead-details" name="details" rows="4"></textarea>
+          </label>
+          <button type="submit">Quiero probarlo</button>
+          <small>
+            Se abrira tu email con el mensaje preparado. No se enviara ningun
+            archivo desde esta pagina.
+          </small>
+        </form>
+      </section>
+
       <section id="precios" class="pricing">
         <article>
           <h2>Gratis</h2>
