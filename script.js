@@ -1,6 +1,7 @@
 const input = document.querySelector("#file-input");
 const results = document.querySelector("#results");
 const fileCount = document.querySelector("#file-count");
+const interestForm = document.querySelector("#interest-form");
 
 function formatBytes(bytes) {
   if (bytes === 0) return "0 B";
@@ -36,3 +37,24 @@ input.addEventListener("change", async (event) => {
   }
 });
 
+interestForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const email = document.querySelector("#lead-email").value.trim();
+  const useCase = document.querySelector("#lead-use-case").value;
+  const details = document.querySelector("#lead-details").value.trim();
+  const subject = encodeURIComponent("Quiero probar Carpeta Certificada");
+  const body = encodeURIComponent(
+    [
+      "Hola, quiero probar Carpeta Certificada.",
+      "",
+      `Email: ${email}`,
+      `Caso de uso: ${useCase}`,
+      `Detalle: ${details || "Sin detalle"}`,
+      "",
+      "Me interesa validar el certificado completo por 4,90 EUR si encaja con mi caso.",
+    ].join("\n"),
+  );
+
+  window.location.href = `mailto:programacioniphonesdk@gmail.com?subject=${subject}&body=${body}`;
+});

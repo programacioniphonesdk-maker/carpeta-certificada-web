@@ -96,6 +96,7 @@ h1 {
 
 .certificate,
 .panel,
+.interest,
 .pricing article,
 .legal {
   background: white;
@@ -163,6 +164,71 @@ dl div {
   padding: 28px;
 }
 
+.interest {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 0.9fr 1.1fr;
+  margin-top: 24px;
+  padding: 28px;
+}
+
+.interest h2,
+.panel h2,
+.legal h2 {
+  font-size: 34px;
+  margin: 0 0 12px;
+}
+
+.interest p,
+.panel p,
+.legal p,
+.pricing p {
+  color: rgb(16 19 22 / 70%);
+  line-height: 1.65;
+}
+
+.interest-form {
+  display: grid;
+  gap: 14px;
+}
+
+.interest-form label {
+  display: grid;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.interest-form input,
+.interest-form select,
+.interest-form textarea {
+  background: #fbfaf7;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font: inherit;
+  padding: 12px;
+  width: 100%;
+}
+
+.interest-form textarea {
+  resize: vertical;
+}
+
+.interest-form button {
+  background: var(--moss);
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  padding: 14px 18px;
+}
+
+.interest-form small {
+  color: rgb(16 19 22 / 55%);
+  line-height: 1.5;
+}
+
 .dropzone {
   border: 1px dashed rgb(16 19 22 / 40%);
   cursor: pointer;
@@ -223,6 +289,7 @@ code {
 @media (max-width: 800px) {
   .hero,
   .panel,
+  .interest,
   .pricing {
     grid-template-columns: 1fr;
   }
@@ -231,4 +298,3 @@ code {
     display: none;
   }
 }
-
